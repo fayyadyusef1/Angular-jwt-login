@@ -1,0 +1,7 @@
+<div *ngIf="loader.getLoading()" class="loading-overlay">
+    <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading ... Please wait ...</div>
+        <div class="progress-text" *ngIf="loader.getProgress() > 0">{{ loader.getProgress() }}%</div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better contrast */
+  z-index: 9999;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+}
+
+.loading-content {
+  text-align: center;
+  display: flex; /* Use flexbox for the content */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: white; /* White background for the content */
+}
+
+.loading-spinner {
+  width: 60px; /* Slightly larger spinner */
+  height: 60px; /* Slightly larger spinner */
+  border: 6px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+  /* border-top-color: #007bff;   */
+  border-top-color: #db2228; /* Engaging color */
+
+  border-radius: 50%;
+  animation: loading-spin 1s linear infinite;
+  margin-bottom: 15px; /* Space between spinner and text */
+}
+
+.progress-text {
+  font-size: 1.5em; /* Larger font size for progress */
+  color: #db2228; /* Use the same color as the spinner for consistency */
+  font-weight: bold;
+  margin-top: 5px; /* Space above progress text */
+}
+
+.loading-text {
+  font-size: 1.2em; /* Slightly larger font size */
+  color: #555; /* Lighter color for additional text */
+  margin-bottom: 10px; /* Space below loading text */
+}
+
+@keyframes loading-spin {
+  to {
+      transform: rotate(360deg);
+  }
+}

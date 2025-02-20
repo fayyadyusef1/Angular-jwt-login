@@ -1,0 +1,198 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-drawer-content {
+  /* background: linear-gradient(70deg, rgb(233, 103, 103) 0%, rgb(88, 162, 180) 80%); */
+  /* height: 100vh; */
+  background: linear-gradient(174deg, rgb(157 157 157) 0%, rgb(250, 249, 246) 80%);
+}
+mat-drawer-container {
+  min-height: calc(100vh - 64px); /* Assuming your toolbar is 64px high */
+}
+mat-drawer {
+  background-color: #982649;
+  height: max-content;
+}
+
+/* .custom-drawer {
+  background-color: var(--accent);
+} */
+
+.mat-drawer.mat-drawer-side {
+  box-shadow: 2px 1px 10px black;
+  /* background: linear-gradient(132deg, #e4808e, #9c74e2, #212335); */
+  background: linear-gradient(132deg, #e4808e, #9c74e2, #212335);
+  
+}
+
+.mat-toolbar {
+  box-shadow: 2px 8px 8px #535353 !important;
+  /* background-color: #DB2228; */
+  margin-bottom: 2px;
+  /* background: linear-gradient(132deg, #f0576b, #8445f3, #212335); */
+  /* background: linear-gradient(132deg, #dfa0a9, #b39cdb, #212335); */
+  background: linear-gradient(132deg, #d72740, #9c74e2, #212335);
+
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+.mat-mdc-list-base {
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+  width: 400px;
+  /* background: linear-gradient(70deg, rgb(115, 171, 185) 0%, rgb(233, 152, 152) 80%); */
+  /* border-radius: 4px; */
+  border-bottom-right-radius: 10px;
+  /* background: linear-gradient(132deg, #FC415A, #591BC5, #212335); */
+  background: linear-gradient(132deg, #dd99a3, #aa8ed9, #212335);
+    background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+
+.pointer {
+  cursor: pointer;
+  text-shadow: 2px 2px 5px rgb(16, 6, 6);
+  font-family: "math", "Roboto", Helvetica, Sans-Serif;
+  user-select: none; /* add this line */
+  -webkit-user-select: none; /* add this line for Safari and Chrome */
+  -moz-user-select: none; /* add this line for Firefox */
+  -ms-user-select: none; /* add this line for IE and Edge */
+}
+
+.poTitles {
+  text-shadow: 2px 2px 5px rgb(255 255 255);
+  font-family: "math", "Roboto", Helvetica, Sans-Serif;
+  font-weight: 800;
+  user-select: none; /* add this line */
+  -webkit-user-select: none; /* add this line for Safari and Chrome */
+  -moz-user-select: none; /* add this line for Firefox */
+  -ms-user-select: none; /* add this line for IE and Edge */
+}
+
+.is-current {
+  /* transform: scale(1.1); */
+  box-shadow: inset 8px 8px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 300px;
+  background-color: #9ea9ab;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.adminItems {
+  width: max-content;
+  cursor: pointer;
+  /* text-shadow: 2px 2px 5px #0c0a0a; */
+  font-family: "math", "Roboto", Helvetica, Sans-Serif;
+  transition: transform 0.3s ease;
+}
+.adminItems:hover {
+  transform: scale(1.1);
+  background-color: #ab9ea9;
+  color: #0c0a0a;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  /* text-shadow: 0 0 3px #ff0000; */
+}
+
+.textmenu {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* text-shadow: 0 0 3px #FF0000; */
+  font-family: "math", "Roboto", Helvetica, Sans-Serif;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.textmenu:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 3px #ff0000;
+}
+
+mat-list-item * {
+  /* color: aliceblue; */
+  color: #09090a;
+  font-size: 20px;
+  text-wrap: wrap;
+}
+
+app-navbar {
+  width: max-content;
+}
+
+.logo-img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  margin: 2%;
+}
+
+.navbar::ng-deep button.mat-icon-button {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: -10px 0px 10px rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    text-shadow: -10px 0px 10px rgba(255, 255, 255, 1);
+  }
+
+  100% {
+    text-shadow: -10px 0px 10px rgba(255, 255, 255, 0);
+  }
+}
+
+.shine-animation {
+  animation: shine 2s ease-in-out infinite;
+  user-select: none; /* add this line */
+  -webkit-user-select: none; /* add this line for Safari and Chrome */
+  -moz-user-select: none; /* add this line for Firefox */
+  -ms-user-select: none; /* add this line for IE and Edge */
+}
+
+a[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+ 
+@media screen and (max-width: 600px) {
+  .logo-img {
+    display: none;
+  }
+
+  .mat-toolbar {
+    justify-content: space-between;
+    font-size: small;
+  }
+
+  .pointer,
+  .textmenu,
+  .matMenu {
+    font-size: 10px;
+  }
+
+  .mat-list-item * {
+    font-size: 12px;
+  }
+
+  .shine-animation {
+    font-size: inherit;
+  }
+
+  .mat-mdc-list-base {
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+  }
+}

@@ -1,0 +1,476 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-select{
+
+  max-height: 200px;
+}
+.right-align div,
+.left-align div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.container .title {
+  background:rgb(173 78 99);
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 5px;
+  box-shadow: -7px 5px 4px rgb(255 214 214 / 20%);
+  font-weight: bold;
+}
+.delete-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.texta {
+  width: 60%;
+}
+
+.textemail {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* .validityLabel {
+  margin: 5% 0;
+  background-color: #a4eee6;
+  font-weight: 600;
+  width: 80%;
+} */
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-infix {
+  border-color: red;
+}
+
+.mat-form-field-subscript-wrapper {
+  color: red;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 20px;
+  padding: 0 5%;
+}
+
+.delete-message {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.delete-button:hover .delete-message {
+  opacity: 1;
+}
+
+.submitB {
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 60%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.submitC{
+  border-radius: 4px;
+  /* background-color: #f4511e; */
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 30%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  
+}
+.submitCreate{
+  width: 40%;
+ font-weight:900;
+ }
+
+.del-message {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform: translateX(-50%);
+  background-color: #ff5722;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: bold;
+}
+
+.del-button:hover .del-message {
+  opacity: 1;
+}
+.submitC span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitC span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submitC:hover span {
+  padding-right: 25px;
+}
+
+.submitC:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.submitB span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitB span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submitB:hover span {
+  padding-right: 25px;
+}
+
+.submitB:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.textdesc textarea {
+  height: 115px;
+  resize: vertical;
+}
+
+.textemail textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.ngx-mat-datetime-picker-overlay {
+  background-color: #fff;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+
+.mat-step {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ag-grid-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ag-grid {
+  width: 90%;
+  min-height: 210px;
+}
+.form-error {
+  margin-top: 10px;
+  text-align: center;
+}
+.navigation-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-container {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.gridbutton-container {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.button-container button {
+  margin-bottom: 10px;
+}
+
+.align-left {
+  margin-left: 0;
+}
+
+mat-form-field.mat-form-field-appearance-fill,
+.gridbutton-container {
+  width: 85%;
+  margin-top: 2%;
+  align-items: center;
+}
+mat-form-field.mat-form-field-appearance-fill,
+.button-container {
+  width: 80%;
+  margin-top: 2%;
+  align-items: center;
+}
+
+mat-form-field.mat-form-field-appearance-outline,
+.gridbutton-container {
+  width: 90%;
+  margin-top: 2%;
+  align-items: center;
+}
+mat-form-field.mat-form-field-appearance-outline,
+.button-container {
+  width: 80%;
+  margin-top: 2%;
+  align-items: center;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+}
+   .file-names-list {
+    font-size: 11px; /* Set the desired font size */
+    max-height: 100px; /* Set the maximum height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    direction: ltr;
+
+  }
+  .file-names-list li {
+    text-align: left; /* Align the file names to the right */
+    list-style-type: none; /* Remove the default bullet points */
+    font-size: 16px;
+
+  } 
+  .file-names-card
+  {
+    background-color: #c2f0f3;
+    position: relative;
+
+  }
+  mat-card-title , .filesnames{
+    font-size: small;
+    background: #e2e2e2
+
+  }
+  mat-card{
+    width: 80%;
+    background-color: #f2f2f2;
+    height: min-content;
+  }
+  .file-container mat-card-title {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 15px;
+
+  }
+  .file-name-container {
+    display: flex;
+    align-items: center;
+    height: min-content;
+  }
+  .file-name-item {
+    display: flex;
+    align-items: center;
+    
+  }
+  /* .submitB{
+    width: 60%;
+    margin-top: 15%;
+  } */
+ .escontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   margin-top: 3%;
+  margin-bottom: 5%;
+  width: 90%;
+  
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+ 
+    .ag-cell {
+      display: flex;
+      align-items: center;
+    }
+  
+  
+  .ag-theme-alpine {
+    position: absolute  ;
+    width: 100%;
+    height: 100%;
+    --ag-background-color: #ddd;
+  }
+  
+   .ag-header-cell-label {
+    text-align: center;
+    font-size: 16px; /* Example: Change font size */
+    font-weight: bold; /* Example: Make it bold */
+  }
+  .note-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* margin: 20px 0; */
+  }
+  
+  .note-content {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-left: 5px solid #ffc107;
+    border-radius: 4px;
+    padding: 15px;
+    /* max-width: 500px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .note-icon {
+    color: #ffc107;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .note-title {
+    color: #856404;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .note-text {
+    color: #533f03;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+ /* .textarea{
+    width: 90% !important;
+  } */
+  
+@media screen and (max-width: 768px) {
+  .texta {
+    width: 80%;
+  }
+  .mat-horizontal-stepper-header-container {
+    flex-direction: column;
+    text-wrap: wrap;
+  }
+   
+  .mat-step-text-label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: wrap;
+}
+  .navigation-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    /* padding: 0 5%; */
+  }
+  .navigation-container .submitB {
+
+    width: 40%;
+  
+  }
+  .textemail {
+    width: 100%;
+    margin: 0;
+  }
+
+  .submitB {
+    width: 25%;
+  }
+
+  mat-form-field.mat-form-field-appearance-fill,
+  .gridbutton-container,
+  .button-container {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: 100%;
+  }
+
+  .button-container button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texta {
+    width: 100%;
+  }
+
+  .mat-stepper-horizontal {
+    flex-direction: column;
+  }
+}

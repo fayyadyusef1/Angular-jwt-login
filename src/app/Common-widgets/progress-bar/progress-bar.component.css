@@ -1,0 +1,70 @@
+.cssload-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 9998; /* Behind the progress bar */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+    visibility: hidden; /* Hidden by default */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+  
+  /* When loading, set overlay opacity to 1 and visibility to visible */
+  .cssload-overlay.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+    pointer-events: auto; /* Enable click events on the overlay */
+  }
+  
+  .cssload-container {
+    position: fixed;
+    width: 50%; /* Set width to 50% of the screen */
+    left: 50%; /* Start positioning from the center */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    top: 50%; /* Center vertically */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    z-index: 9999; /* Ensure it's on top of the overlay */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .progress-info {
+    flex-grow: 1; /* Allow this section to grow and take available space */
+    margin-left: 15px; /* Space between spinner and progress info */
+  }
+  
+  .progress-bar {
+    height: 15px; /* Height for better visibility */
+    /* background: linear-gradient(90deg, #c78181, #ee2121); */
+    background: linear-gradient(90deg, #ee2121, #c78181); /* Gradient color */
+    border-radius: 0 15px 15px 0; /* Rounded corners only on the right */
+    transition: width 0.2s ease; /* Smooth transition */
+  }
+  
+  .progress-text {
+    margin-top: 5px; /* Space between the bar and text */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Spinner style */
+  .spinner {
+    width: 40px; /* Spinner size */
+    height: 40px; /* Spinner size */
+    border: 5px solid rgba(0, 0, 0, 0.3); /* Light border for spinner */
+    border-top: 5px solid #ee2121; /* Green top border */
+    border-radius: 50%; /* Circular spinner */
+    animation: spin 1s linear infinite; /* Spinner animation */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,140 @@
+<mat-toolbar color="accent" class="mat-elevation-z8">
+  <button (click)="drawer.toggle()" mat-icon-button aria-label="Toggle Menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <img src="/assets/Images/companyLogo.jpg" alt="companyWebsite Logo" class="logo-img pointer" (click)="navigateToHome()" />
+  <span (click)="navigateToHome()" class="shine-animation">Angular Template with JWT Login</span>
+
+  <span class="example-spacer"></span>
+
+   <!--   /// menu options will be active according to roleId
+  /// roleId : 41 will get all menu options open , 1 admin , 3 is specialist ,4+5 are HOS and HOU with same options 
+  // you can change hard coded RoleID in login.component.ts
+  -->
+
+  <h2 *ngIf="isSignedIn" class="pointer">
+    {{ "Welcome" | translate }} {{ userInfo.aliasName }}
+  </h2>
+  <ng-container *ngIf=!isSignedIn>
+    <a routerLink="/login" mat-button><i class="fa-solid fa-arrow-right-to-bracket fa-xl"></i> {{"login" |
+      translate}}</a>
+  </ng-container>
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="over" position="start" color="accent" (closed)="onSidenavClose()" class="custom-drawer">
+    <mat-nav-list>
+   <!-- 
+        /// menu options will be active according to roleId
+  /// roleId : 41 will get all menu options open , 1 admin , 3 is specialist ,4+5 are HOS and HOU with same options 
+  // you can change hard coded RoleID in login.component.ts
+  -->
+  <mat-list-item disabled="true">
+    <span class="poTitles"><i> This List is customized to your Role</i></span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+      <mat-list-item disabled="true">
+        <span class="poTitles" title="Navigate according to you Role"> Team Member Menu </span>
+      </mat-list-item>
+      <!-- Dealer , HOS , HOU  options -->
+      <mat-list-item class="textmenu" [disabled]="!isAllowed(['1,2,3,4,5,41'])">
+        <a routerLink="/home" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['1,2,3,4,5,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-house fa-2xl"></i> {{ "Home" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="textmenu" [disabled]="!isAllowed(['3,41'])">
+        <a routerLink="/create-edit-rfq" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['3,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-circle-plus fa-2xl"></i> {{ "add_new_rfq" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="textmenu" [disabled]="!isAllowed(['3,4,5,41'])">
+        <a routerLink="/view-rfqs" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['3,4,5,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-envelopes-bulk fa-2xl"></i> {{ "RFQs" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="textmenu" [disabled]="!isAllowed(['4,5,41'])">
+        <a routerLink="/reports" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['4,5,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-file-contract fa-2xl"></i> {{ "reports" | translate }}
+        </a>
+      </mat-list-item>
+
+      <br>
+      <mat-divider></mat-divider>
+
+      <!-- Admin options -->
+      <mat-list-item disabled="true">
+        <span class="poTitles">Admin Panel</span>
+      </mat-list-item>
+
+      <mat-list-item class="adminItems" [disabled]="!isAllowed(['1,41'])">
+        <a routerLink="/users" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['1,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-users fa-2xl"></i> {{ "Users_list" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="adminItems" [disabled]="!isAllowed(['1,41'])">
+        <a routerLink="/roles" mat-button routerLinkActive="is-current" [disabled]="!isAllowed(['1,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-person-chalkboard fa-xl"></i> {{ "Role_list" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="adminItems" [disabled]="!isAllowed(['1,41'])">
+        <a routerLink="/SupplierListComponent" routerLinkActive="is-current" mat-button
+          [disabled]="!isAllowed(['1,41'])" (click)="closeDrawer($event)">
+          <i class="fa-solid fa-building fa-xl"></i> {{ "suppliers" | translate }}
+        </a>
+      </mat-list-item>
+
+      <mat-list-item class="adminItems" [disabled]="!isAllowed(['1,41'])">
+        <a routerLink="/list-management" routerLinkActive="is-current" mat-button [disabled]="!isAllowed(['1,41'])"
+          (click)="closeDrawer($event)">
+          <i class="fa-solid fa-list-check fa-xl"></i> {{ "lists_management" | translate }}
+        </a>
+      </mat-list-item>
+      <br>
+
+      <mat-divider></mat-divider>
+
+      <ng-container *ngIf="isSignedIn">
+        <mat-list-item disabled="true">
+          <span class="poTitles">{{ "Welcome" | translate }} {{ userInfo.roleName }} !</span>
+        </mat-list-item>
+     
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="textmenu">
+          <a mat-button (click)="logout()">
+            <i class="fa-solid fa-right-from-bracket fa-xl"></i> {{ "logout" | translate }}
+          </a>
+        </mat-list-item>
+      </ng-container>
+
+      <ng-container *ngIf="!isSignedIn">
+        <mat-list-item class="textmenu">
+          <a routerLink="/login" mat-button>
+            <i class="fa-solid fa-arrow-right-to-bracket fa-xl"></i> {{ "login" | translate }}
+          </a>
+        </mat-list-item>
+      </ng-container>
+
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+
+    <div >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

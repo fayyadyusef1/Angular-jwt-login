@@ -1,0 +1,526 @@
+.parent-of-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+/*overflow: auto */
+}
+
+  .merge-cell {
+    border-bottom: none; /* Remove the bottom border for merged cells */
+  }
+  mat-form-field{
+    width: 100%;
+  }
+  .container {
+    /* background : linear-gradient(to left, #f39999, rgb(242, 233, 177)); */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 2%;
+    width: 98%;
+    height: max-content;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* padding: 1%; */
+    backdrop-filter: invert(20%);
+    font-family: "sans-serif" ;
+    gap: 1%;
+  }
+  .container:first-child {
+    margin-bottom: 10px; /* Adjust the margin-bottom value as per your requirement */
+  }
+  .mat-mdc-header-cell {
+    font-weight: 900;
+    font-family: "math";
+  
+  }
+  .actionsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 98%; */
+    flex-direction: row;
+    box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    align-items: center;
+    padding: 2%;  
+  }
+  .NewActions{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between ;
+    align-items: flex-start; 
+    gap: 10%;
+    cursor: pointer;
+    list-style-type: none; /* Add this line */
+  }
+  .statusAction{
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    /* backdrop-filter: invert(20%); */
+    justify-content: space-around;
+    filter: grayscale(1);
+  }
+  .mtitle{
+    font-size: 30px;
+    font-family: fantasy;
+    letter-spacing: .178571429em;
+  }
+ 
+  .lessActions{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 5%;
+    cursor: pointer;
+    /* text-decoration-line: underline; */
+  }
+  .lessActions li{
+    list-style-type: none;
+
+  }
+  .lessActions li a {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .lessActions li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+/* .suppliersList {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} */
+.lessActions li:hover {
+  transform: scale(1.4);
+}
+.lessActions li:hover a {
+  color: #000;
+}
+.lessActions li:hover i {
+  color: #000;
+}
+.Actions {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: flex-start ;
+  align-items: flex-start;
+  gap: 5%;
+  cursor: pointer;
+  /* text-decoration-line: underline; */
+}
+
+  .Actions li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 5px;
+    margin-bottom: 10%;
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+  }
+  
+ 
+  
+  .Actions li a {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .Actions li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  
+.Actions li:hover {
+  transform: scale(1.4);
+}
+.Actions li:hover a {
+  color: #000;
+}
+.Actions li:hover i {
+  color: #000;
+}
+
+
+   .mat-mdc-header-row {
+    background-color:rgb(228 228 228);
+    text-wrap: wrap;
+  }
+ 
+  .table-container {
+    overflow-x: auto;
+    border-radius: 5px;
+    width: 96%;
+    align-self: center;
+    
+  }
+  
+  .checkbox-cell ::ng-deep .ag-selection-checkbox {
+    transform: scale(1.5);
+  }
+  .result-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* padding: 1%; */
+    justify-content: space-around;
+    /* box-shadow: -5px -6px 13px rgba(0, 0, 0, 0.2); */
+    /* margin-bottom: 5%; */
+  }
+  .result-card mat-card-title {
+    position: relative;
+    z-index: 1; /* Ensure the card title appears above the background */
+    font-weight: 700;
+   }
+  .mat-divider{
+    margin-bottom: 3px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  .max-width-column {
+    text-align: center; 
+      max-width: 200px;
+    word-wrap: break-word;
+  }
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .row {
+    display: flex;
+    /* align-items: flex-start;   */
+    font-size: large;
+    margin: 2%;
+  }
+
+    mat-label {
+    width: 100%;
+    text-align: start;
+  }  
+  .mdc-list {
+    margin: 3px
+
+  }
+  .info {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  .cell-wrap-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+    .notes{
+    border-radius: 5px;
+    max-width: 500px ;
+    max-height:300px ;
+    overflow: auto;
+    background-color:#e4e4e4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }  
+  .mat-expansion-panel-header:not([aria-disabled=true]) {
+    cursor: pointer;
+    background: #efefef;
+    box-shadow:   20px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  .status-card{
+    position: relative;
+    width: 100%; /* Adjust the width to your desired size */
+    height: 100%;  
+    border-radius: 15px;
+    padding: 3%;
+    border: solid;
+
+    
+  }
+
+  .status-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:30%; /* Adjust the width of the background image */
+    height: 25%;  
+    background-image: url('/assets/Images/supplier1.png');
+    background-size: cover;
+    filter: blur(1px); /* Adjust the blur amount to your desired level */
+    border-radius: 15px;
+  }
+
+  .status-card mat-card-title {
+    position: relative;
+    z-index: 1; /* Ensure the card title appears above the background */
+    font-weight: 700;
+  }
+.files-card{
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+   /* box-shadow: 6px 0px 20px 0px rgba(0, 0, 0, 0.2); */
+   font-weight: 900;
+   font-size: large;
+ }
+  .example-card {
+    position: relative;
+    width: 100%; /* Adjust the width to your desired size */
+    height: 100%; /* Adjust the height to your desired size */
+    background-size: cover;
+    border-radius: 15px;
+    padding: 3%;
+    border: solid;
+
+  }
+
+  .example-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%; /* Adjust the width of the background image */
+    height: 50%; /* Adjust the height of the background image */
+    background-image: url('/assets/Images/companyLogo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px); /* Adjust the blur amount to your desired level */
+    border-radius: 15px;
+  }
+
+  .example-card mat-card-title {
+    position: relative;
+    z-index: 1; /* Ensure the card title appears above the background */
+    font-weight: 700;
+  }
+  .firstsubcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: inherit;
+  }
+  
+  .secondsubcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the column vertically */
+    justify-content: center; /* Center the column horizontally */
+    width: 100%;
+    gap: 2rem; /* Add a gap between the cards */
+    margin-bottom: 2px;
+  }
+  .rdqdetails{
+    width :50%;
+    padding: 20px;
+    box-shadow: -1px 2px 13px rgba(0, 0, 0, 0.2)
+  }
+  .emaildetails{
+    padding: 2%;
+    width :95%;
+    /* box-shadow: -1px 2px 13px rgba(0, 0, 0, 0.2); */
+    
+  }
+  .tab{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+
+  }
+  .textemail {
+    width: 100%;
+
+  }
+ 
+ 
+  .textemail textarea {
+    height: 400px;
+    resize: vertical; /* Optional: Allow vertical resizing of textarea */
+    width: inherit;
+    background: #efefef;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: system-ui;
+    font-size: 18px;
+    font-style: italic;
+  }
+  .ag-theme-balham , .ag-theme-balham-dark{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size:16px; 
+    text-wrap: wrap;
+     border-radius: 5px;
+  }
+/* Customize the scrollbar thumb */
+/* ::ng-deep .ag-theme-balham .ag-scroller-corner {
+  background-color: #f1f1f1;
+}
+
+::ng-deep .ag-theme-balham .ag-scroller-corner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: #888;
+}
+
+::ng-deep .ag-theme-balham .ag-scroller .ag-scroller-slider {
+  border-radius: 18px;
+}
+
+::ng-deep .ag-theme-balham .ag-scroller .ag-scroller-slider:hover {
+  background-color: #555;
+} */
+  
+  @media screen and (max-width: 550px) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+        font-size: 11px; /* Adjust font size for the container */
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Height adjusts to content */
+        margin-right: 0; /* Adjust margins as needed */
+    }
+
+    .container .title {
+        font-size: medium; /* Adjust title font size */
+        width: 90%; /* Full width */
+        text-align: center; /* Center align if needed */
+    }
+    .table-container {
+      overflow-x: auto;
+      font-size: 3px !important;
+     
+     }
+    .result-card  {
+      width: 100%;
+     
+       }
+
+       .actionsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 95%;
+        padding: 5px;
+       }
+       .Actions {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        font-size: 15px;
+        padding-top: 3%;
+    }
+    .containerform {
+        flex-wrap: wrap; /* Enable wrapping for child elements */
+        gap: 3px; /* Adjust gap between elements */
+        padding: 5px; /* Adjust padding for the form container */
+    }
+
+    mat-form-field {
+        width: 80%; /* Form fields take full width */
+    }
+    .mtitle{
+      font-size: 20px;
+      font-family: fantasy;
+      letter-spacing: .0878571429em;
+    }
+
+    .lessActions{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 20px ;
+
+    }
+.firstsubcon {
+  flex-direction: column;
+}
+.rdqdetails {
+   padding: 5px;   
+    width: 100%;
+    padding: 5px;
+  }
+  .emaildetails{
+    padding: 5px;   
+     width: 100%;
+     padding: 5px;
+   }
+  .tab {
+    width: 100%;
+    margin-top: 10px;
+  }
+   
+  .button-container {
+    width: 90%; /* Full width for button container */
+    justify-content: center; /* Center buttons */
+    align-items: center;
+    padding-right: 0; /* Adjust padding as needed */
+}
+
+button {
+    padding: 5px 10px; /* Adjust button padding */
+    font-size: smaller; /* Adjust button font size */
+}
+
+    .ag-theme-balham  , .ag-theme-balham-dark{
+      width: 100%; /* Full width for the grid */
+      height: auto; /* Adjust height to content or set a specific value */
+      overflow: auto; /* Allow scrolling if content overflows */
+      font-size: 10px;
+  }
+  .ag-theme-balham, .container {
+    max-width: 100%;
+  }
+  .ag-theme-balham, .ag-theme-balham .ag-root-wrapper, .ag-theme-balham .ag-root-wrapper-body, .ag-theme-balham .ag-root, .ag-theme-balham .custom-ag-grid {
+    width: 99% !important; /* Full width for the grid */
+    height: auto; /* Adjust height as needed */
+    max-width: 100% !important; /* Ensure it can grow to full width */
+  
+  }
+
+  .filter-row mat-form-field {
+    max-width: 100%; /* Full width on smaller screens */
+    font-size: 10px;
+  }
+
+  }

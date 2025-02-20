@@ -1,0 +1,25 @@
+p {
+  font-family: Lato;
+}
+.bg {
+  background: #1f4040;
+  background: -webkit-linear-gradient(to left, #99f2c8, #1f4037);
+  background: linear-gradient(to left, #99f2c8, #1f4037);
+  /* height: 100vh; */
+}
+@media (max-width: 600px) {
+  /* .body{
+    font-size: small;
+
+  } */
+  .main-class {
+      width: 100%; /* Example of a responsive setting */
+      margin: 0;
+      padding: 0;
+    
+  }
+  .pointer{
+
+    font-size: small;
+  }
+}
