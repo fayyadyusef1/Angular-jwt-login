@@ -1,9 +1,9 @@
 .parent-of-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center; /* Center vertically */
   height: 100vh; /* Full viewport height */
-  /* background: linear-gradient(135deg, #343a40, #212529);   */
+  padding: 1rem; /* Add padding for smaller screens */
 }
 
 .jumbotron {
@@ -13,9 +13,11 @@
   border-radius: 15px; /* Rounded corners */
   padding: 2rem; /* Increased padding */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Set a max width for larger screens */
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Arial', sans-serif; /* Consistent font */
   margin: 0.5rem 0; /* Spacing between headings */
 }
@@ -28,6 +30,11 @@ h1 {
 h2 {
   font-size: 2rem; /* Slightly smaller than h1 */
   color: #07090b; /* Slightly darker for distinction */
+}
+
+h3 {
+  font-size: 1.5rem; /* Adjusted size for h3 */
+  color: #07090b; /* Consistent color */
 }
 
 .container {
@@ -66,5 +73,28 @@ h2 {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .jumbotron {
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+
+  .container {
+    padding: 1rem; /* Reduced padding for smaller screens */
   }
 }
