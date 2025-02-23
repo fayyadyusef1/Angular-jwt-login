@@ -193,6 +193,10 @@ a[disabled] {
   .mat-mdc-list-base {
     flex-direction: column;
     display: flex;
-    width: 50%;
+    gap: 5px; /* Add gap between items */
+    width: 100%;
+    border-radius: 5px;
+    max-height: calc(100vh - 200px); /* Adjust based on your needs */
+    overflow-y: auto;
   }
 }

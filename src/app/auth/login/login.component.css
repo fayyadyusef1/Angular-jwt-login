@@ -1,123 +1,122 @@
- .parent-of-container {
-    display: flex;  
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 100vh; 
-    
+
+.parent-of-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
 }
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* width: 90%; */
-    min-width: fit-content;
-    /* height: 80vh;  */
-    min-height: fit-content; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Removed individual margin properties as they are no longer needed */
-  }
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+mat-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+}
+
+mat-card-header {
+  margin-bottom: 1.5rem;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
 form {
-  padding: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 11px;
-
+  gap: 1rem;
 }
+
 .mat-mdc-form-field {
-width: 100%;
-}
-.cssload-container {
-  position: fixed;
   width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 9999;
-}
-.forgot-password-link{
-  margin-top: 10px;
-}
-mat-spinner {
-  display: block;
-  position: absolute;
-  left: 47%;
-  top: 38%;
-}
-mat-card{
-   padding: 50px;
-   width: 500px;
+  margin-bottom: 1rem;
 }
 
-mat-icon{
-
-  background-repeat: no-repeat;
-  display: contents;
-  fill: currentColor;
-
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
-.mybutton:hover {
-  transform: scale(1.2);
-}
+
 .mybutton {
-  transition: transform 0.3s ease;
   width: 100%;
-}
- 
-@media screen and (max-width: 600px) {
-  .parent-of-container {
-    height: auto;
-  }
-
-  .container {
-    flex-direction: column;
-    height: auto;
-    padding: 5%;
-  }
-
-  form {
-    padding: 5%;
-    font-size: 14px;
-  }
-
-  mat-card {
-    padding: 20px;
-  }
-
-  mat-spinner {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+  padding: 0.75rem;
+  /* background-color: #1976d2; */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.cssload-container {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 9999;
+.mybutton:hover {
+  transform: scale(1.02);
+  background-color: #1565c0;
 }
 
 .forgot-password-link {
-  margin-top: 10px;
+  margin-top: 1rem;
+  text-align: center;
 }
 
-mat-icon {
-  background-repeat: no-repeat;
-  display: contents;
-  fill: currentColor;
+.forgot-password-link a {
+  color: #1976d2;
+  text-decoration: none;
 }
 
-.mybutton:hover {
-  transform: scale(1.2);
+.forgot-password-link a:hover {
+  text-decoration: underline;
 }
 
-.mybutton {
-  transition: transform 0.3s ease;
+.cssload-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .parent-of-container {
+    padding: 0.5rem;
+    min-height: 80vh;
+
+  }
+
+  mat-card {
+    padding: 1.5rem;
+  }
+
+  input, .mybutton {
+    padding: 0.6rem;
+  }
+
+  mat-card-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  mat-card {
+    padding: 1rem;
+  }
+
+  form {
+    gap: 0.75rem;
+  }
 }

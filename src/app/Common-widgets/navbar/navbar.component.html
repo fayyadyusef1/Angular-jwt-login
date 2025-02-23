@@ -121,7 +121,7 @@
 
       <ng-container *ngIf="!isSignedIn">
         <mat-list-item class="textmenu">
-          <a routerLink="/login" mat-button>
+          <a routerLink="/login" mat-button (click)="closeDrawer($event)">
             <i class="fa-solid fa-arrow-right-to-bracket fa-xl"></i> {{ "login" | translate }}
           </a>
         </mat-list-item>
